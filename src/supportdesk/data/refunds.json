@@ -1,0 +1,18 @@
+[
+  {
+    "id": "R-9001",
+    "order_id": "O-5004",
+    "amount": "129.00",
+    "reason": "Keyboard returned within 30 days, unused.",
+    "status": "issued",
+    "created_at": "2026-08-28T10:00:00Z"
+  },
+  {
+    "id": "R-9002",
+    "order_id": "O-5010",
+    "amount": "18.00",
+    "reason": "Water bottle leaked on arrival.",
+    "status": "issued",
+    "created_at": "2026-09-25T15:30:00Z"
+  }
+]

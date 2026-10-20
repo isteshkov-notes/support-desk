@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Least privilege: CI only needs to read the code.
+permissions:
+  contents: read
+
+# A new push to the same branch cancels the run still in progress.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Lint, types, tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      # Installs the same uv version as local dev and caches downloaded packages
+      # (keyed on uv.lock). uv then installs Python from .python-version itself.
+      - uses: astral-sh/setup-uv@v10
+        with:
+          version: "0.11.14"
+          enable-cache: true
+
+      # --locked: fail if uv.lock is out of date with pyproject.toml, instead of
+      # silently re-resolving. CI must test exactly what was committed.
+      - name: Install
+        run: uv sync --locked
+
+      - name: Ruff lint
+        run: uv run ruff check --output-format=github .
+
+      - name: Ruff format
+        run: uv run ruff format --check .
+
+      - name: Pyright (strict)
+        run: uv run pyright
+
+      - name: Pytest
+        run: uv run pytest -v
+
+  docker:
+    name: Docker image
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Build
+        run: docker build -t supportdesk:ci .
+
+      # Proves the installed wheel (not the source tree) can serve requests and
+      # finds its packaged data files.
+      - name: Smoke test
+        run: |
+          docker run -d --name sd -p 8000:8000 supportdesk:ci
+          for _ in $(seq 1 20); do
+            curl -sf localhost:8000/health && break
+            sleep 1
+          done
+          curl -sf localhost:8000/health
+          curl -sf localhost:8000/tools | grep -q issue_refund
+
+      - name: Container logs on failure
+        if: failure()
+        run: docker logs sd

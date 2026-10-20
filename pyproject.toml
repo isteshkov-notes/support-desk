@@ -1,0 +1,66 @@
+[project]
+name = "supportdesk"
+version = "0.1.0"
+description = "Multi-agent customer-support assistant built on Claude (AI Engineer / FDE prep project)"
+readme = "README.md"
+authors = [
+    { name = "isteshkov", email = "isteshkov@griddynamics.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "anthropic>=1.11.0",
+    "fastapi>=0.143.0",
+    "pydantic-settings>=2.15.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+supportdesk = "supportdesk.__main__:main"
+
+[build-system]
+requires = ["uv_build>=0.11.14,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "jsonschema>=4.26.0",
+    "pyright>=1.1.414",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "ruff>=0.16.10",
+    "types-jsonschema>=4.26.0.20261006",
+]
+
+[tool.pyright]
+typeCheckingMode = "strict"
+venvPath = "."
+venv = ".venv"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D",                        # docstrings
+    "COM812", "ISC001",         # conflict with the formatter
+    "CPY",                      # copyright headers
+    "ERA001",                   # "commented-out code": flags the Go-equivalent learning comments
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = [
+    "S101",     # assert is how pytest works
+    "PLR2004",  # expected values in tests are literal by nature
+    "INP001",   # tests/ has no __init__.py on purpose (--import-mode=importlib)
+]
+
+[tool.pytest]
+minversion = "9.0"
+testpaths = ["tests"]
+addopts = ["--import-mode=importlib"]
+strict = true
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+asyncio_default_test_loop_scope = "function"

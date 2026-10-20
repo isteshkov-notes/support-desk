@@ -1,0 +1,50 @@
+[
+  {
+    "id": "C-1001",
+    "name": "Alice Martin",
+    "email": "alice.martin@example.com",
+    "tier": "standard",
+    "loyalty_points": 340,
+    "created_at": "2025-03-14T09:12:00Z"
+  },
+  {
+    "id": "C-1002",
+    "name": "Bob Chen",
+    "email": "bob.chen@example.com",
+    "tier": "gold",
+    "loyalty_points": 5120,
+    "created_at": "2023-11-02T17:45:00Z"
+  },
+  {
+    "id": "C-1003",
+    "name": "Carla Diaz",
+    "email": "carla.diaz@example.com",
+    "tier": "standard",
+    "loyalty_points": 900,
+    "created_at": "2024-06-21T11:30:00Z"
+  },
+  {
+    "id": "C-1004",
+    "name": "Dmitri Ivanov",
+    "email": "dmitri.ivanov@example.com",
+    "tier": "standard",
+    "loyalty_points": 75,
+    "created_at": "2026-01-08T08:05:00Z"
+  },
+  {
+    "id": "C-1005",
+    "name": "Eve Johnson",
+    "email": "eve.johnson@example.com",
+    "tier": "standard",
+    "loyalty_points": 20,
+    "created_at": "2026-08-30T22:14:00Z"
+  },
+  {
+    "id": "C-1006",
+    "name": "Farah Khan",
+    "email": "farah.khan@example.com",
+    "tier": "gold",
+    "loyalty_points": 2300,
+    "created_at": "2024-02-11T14:00:00Z"
+  }
+]

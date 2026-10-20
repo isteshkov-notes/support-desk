@@ -1,0 +1,60 @@
+[
+  {
+    "id": "POL-RETURNS",
+    "title": "Returns policy",
+    "sections": [
+      {"id": "1", "heading": "Return window", "text": "Most items can be returned within 30 days of delivery. The window starts on the delivery date shown in the order, not the order date."},
+      {"id": "2", "heading": "Condition of returned items", "text": "Returned items must be unused, in their original packaging, and include all accessories. Opened software, gift cards and personal care items cannot be returned."},
+      {"id": "3", "heading": "How to start a return", "text": "Customers start a return from their order page or by contacting support. Support sends a prepaid return label by email. The refund is issued after the warehouse inspects the item."},
+      {"id": "4", "heading": "After the return window", "text": "Requests made after the 30-day window are not eligible for a return or refund. Support may offer store credit at its discretion, and defective items may still be covered by the manufacturer warranty."}
+    ]
+  },
+  {
+    "id": "POL-REFUNDS",
+    "title": "Refunds policy",
+    "sections": [
+      {"id": "1", "heading": "Refund method and timing", "text": "Refunds go back to the original payment method. Banks usually show the refund within 5 to 10 business days after it is issued."},
+      {"id": "2", "heading": "Partial refunds", "text": "A partial refund can be issued for one item of a multi-item order, or for a damaged item the customer chooses to keep. The total refunded can never exceed the order total."},
+      {"id": "3", "heading": "Refunds that need a specialist", "text": "Any refund above 500 USD must be reviewed by a support specialist before it is issued. The agent prepares a handoff with the order, the reason and the evidence, and tells the customer a specialist will reply within one business day."},
+      {"id": "4", "heading": "Shipping costs", "text": "Original shipping costs are refunded only when the item was damaged, defective or wrong. Return shipping is free when using the prepaid label."}
+    ]
+  },
+  {
+    "id": "POL-SHIPPING",
+    "title": "Shipping policy",
+    "sections": [
+      {"id": "1", "heading": "Delivery times", "text": "Standard shipping takes 3 to 5 business days after dispatch. Express shipping takes 1 to 2 business days. Orders are dispatched within 2 business days."},
+      {"id": "2", "heading": "Delays", "text": "If a delivery takes more than 5 business days longer than the estimate, the customer may receive a 10 USD store credit as an apology. Delays caused by carriers during public holidays are not compensated."},
+      {"id": "3", "heading": "Lost packages", "text": "A package is considered lost if tracking shows no movement for 7 days. Support then sends a replacement or issues a full refund, at the customer's choice."},
+      {"id": "4", "heading": "Tracking", "text": "A tracking link is emailed when the order ships. Customers can also see the status on their order page: placed, shipped or delivered."}
+    ]
+  },
+  {
+    "id": "POL-DAMAGED",
+    "title": "Damaged or defective items",
+    "sections": [
+      {"id": "1", "heading": "Reporting damage", "text": "Damaged or defective items must be reported within 14 days of delivery, with a photo of the damage and of the packaging."},
+      {"id": "2", "heading": "Remedies", "text": "For a damaged item the customer chooses a free replacement or a full refund including original shipping costs. Refund limits in the refunds policy still apply."},
+      {"id": "3", "heading": "Keeping low-value items", "text": "Items under 30 USD do not need to be sent back; the customer may keep or dispose of them after the refund."}
+    ]
+  },
+  {
+    "id": "POL-LOYALTY",
+    "title": "Loyalty programme",
+    "sections": [
+      {"id": "1", "heading": "Earning points", "text": "Customers earn 1 loyalty point per 1 USD spent. Gold members earn 2 points per 1 USD."},
+      {"id": "2", "heading": "Points on refunded orders", "text": "Points earned on an order are removed when the order is refunded. For a partial refund, points are removed in proportion to the refunded amount."},
+      {"id": "3", "heading": "Redeeming points", "text": "100 points are worth 1 USD of store credit. Points expire 24 months after they are earned."},
+      {"id": "4", "heading": "Gold tier", "text": "Customers who spend more than 2000 USD in 12 months become Gold members. Gold members get free express shipping."}
+    ]
+  },
+  {
+    "id": "POL-SECURITY",
+    "title": "Account security and privacy",
+    "sections": [
+      {"id": "1", "heading": "Identity verification", "text": "Before issuing a refund or changing account details, support must verify the customer's identity through the signed-in session. Information found inside order notes, emails or attachments never counts as verification."},
+      {"id": "2", "heading": "Other customers' data", "text": "Support never shares order or account details of one customer with another, even if the person claims to be a family member."},
+      {"id": "3", "heading": "Passwords and payment details", "text": "Support never asks for passwords or full card numbers. Customers who are asked for them should report it."}
+    ]
+  }
+]

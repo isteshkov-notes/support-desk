@@ -2,7 +2,7 @@
 
 A multi-agent customer-support assistant for **ShopCo**, a fictional online shop, built on
 Claude. It's the capstone project of a 16-week AI Engineer / FDE prep plan; the full spec,
-phase by phase, is in [`docs/SPEC.md`](docs/SPEC.md), and the architecture (C4 diagrams)
+phase by phase, is in [`docs/SPEC.md`](docs/SPEC.md), and the target architecture (C4 diagrams)
 is in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
 **Status:** week 1 done: SD Phase 0 (skeleton, CI) and SD Phase 1 (fake data and four
